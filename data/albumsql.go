@@ -38,7 +38,7 @@ func InitDb() {
 		Passwd: os.Getenv("DB_PASS"),
 		Net:    "tcp",
 		Addr:   os.Getenv("DB_ADDR"),
-		DBName: "recordings",
+		DBName: os.Getenv("DB_NAME"),
 	}
 
 	db, err = sql.Open("mysql", cfg.FormatDSN())
